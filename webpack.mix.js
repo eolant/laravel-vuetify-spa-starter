@@ -11,15 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .stylus('resources/assets/stylus/app.styl', 'public/css');
+mix.js('resources/js/app.js', 'public/js')
+   .stylus('resources/stylus/app.styl', 'public/css');
 
 mix.webpackConfig({
   resolve: {
     extensions: ['.js', '.json', '.vue'],
     alias: {
-      '~': path.join(__dirname, './resources/assets/js'),
-      '$comp': path.join(__dirname, './resources/assets/js/components')
+      '~': path.join(__dirname, './resources/js'),
+      '$comp': path.join(__dirname, './resources/js/components')
     }
   }
 })

@@ -34,12 +34,13 @@ class ForgotPasswordController extends Controller
     /**
      * Get the response for a successful password reset link.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
-    protected function sendResetLinkResponse($response)
+    protected function sendResetLinkResponse(Request $request, $response)
     {
-        return ['status' => trans($response)];
+        return response()->json(['status' => trans($response)]);
     }
 
     /**
@@ -47,7 +48,7 @@ class ForgotPasswordController extends Controller
      *
      * @param  \Illuminate\Http\Request $request
      * @param  string  $response
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     protected function sendResetLinkFailedResponse(Request $request, $response)
     {
