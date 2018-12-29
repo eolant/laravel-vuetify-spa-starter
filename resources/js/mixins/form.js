@@ -6,9 +6,7 @@ export default {
     valid: true,
     labels: {},
     form: {},
-    rules: {
-      required: (field) => ((v) => !!v || 'The ' + (this.labels && this.labels[field] && this.labels[field].toLowerCase() + ' ') + 'field is required')
-    },
+    rules: {},
     errors: {}
   }),
 
@@ -30,6 +28,8 @@ export default {
         }
       }
     }
+
+    this.rules.required = (field) => ((v) => !!v || 'The ' + (this.labels && this.labels[field] && this.labels[field].toLowerCase() + ' ') + 'field is required')
   },
 
   methods: {
