@@ -30,8 +30,8 @@ axios.interceptors.response.use(response => {
 
     if (error.response.status === 401 ||
       (error.response.status === 500 && (
-        error.resopnse.data.message === 'Token has expired and can no longer be refreshed' ||
-        error.resopnse.data.message === 'The token has been blacklisted'
+        error.response.data.message === 'Token has expired and can no longer be refreshed' ||
+        error.response.data.message === 'The token has been blacklisted'
       ))
     ) {
       store.dispatch('auth/destroy')
