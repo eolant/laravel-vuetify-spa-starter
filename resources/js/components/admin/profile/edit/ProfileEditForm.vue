@@ -34,6 +34,7 @@
             :error-messages="errors.password"
             :disabled="loading"
             hint="At least 6 characters"
+            autocomplete="new-password"
         ></v-text-field>
 
         <v-text-field
@@ -42,6 +43,7 @@
             :type="passwordHidden ? 'password' : 'text'"
             :error-messages="errors.password_confirmation"
             :disabled="loading"
+            autocomplete="new-password"
         ></v-text-field>
       </v-card-text>
     </v-card>
