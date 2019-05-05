@@ -14,9 +14,11 @@
 </template>
 
 <script>
+  import PasswordResetForm from './PasswordResetForm'
+
 	export default {
 		components: {
-			'password-reset-form': require('./PasswordResetForm')
+			'password-reset-form': PasswordResetForm
 		},
 
 		methods: {

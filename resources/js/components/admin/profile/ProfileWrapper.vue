@@ -14,9 +14,11 @@
 </template>
 
 <script>
+  import Sidemenu from '$comp/ui/Sidemenu'
+
   export default {
     components: {
-      'sidemenu': require('$comp/ui/Sidemenu')
+      'sidemenu': Sidemenu
     },
 
     data: () => ({

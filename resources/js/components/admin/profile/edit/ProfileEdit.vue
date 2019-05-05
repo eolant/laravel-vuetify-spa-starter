@@ -6,9 +6,11 @@
 </template>
 
 <script>
+  import ProfileEditForm from './ProfileEditForm'
+
   export default {
     components: {
-      'profile-edit-form': require('./ProfileEditForm')
+      'profile-edit-form': ProfileEditForm
     },
 
     methods: {

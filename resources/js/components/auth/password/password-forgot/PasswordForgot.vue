@@ -14,9 +14,11 @@
 </template>
 
 <script>
+  import PasswordForgotForm from './PasswordForgotForm'
+
   export default {
     components: {
-      'password-forgot-form': require('./PasswordForgotForm')
+      'password-forgot-form': PasswordForgotForm
     },
 
     methods: {

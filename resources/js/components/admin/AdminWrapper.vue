@@ -17,6 +17,9 @@
 
 <script>
   import { settings } from '~/config.js'
+  import AppNav from './shared/AppNav'
+  import TopMenu from './shared/TopMenu'
+  import AppFooter from './shared/AppFooter'
 
   export default {
     data: () => ({
@@ -24,9 +27,9 @@
     }),
 
     components: {
-      'app-nav': require('./shared/AppNav'),
-      'top-menu': require('./shared/TopMenu'),
-      'app-footer': require('./shared/AppFooter')
+      'app-nav': AppNav,
+      'top-menu': TopMenu,
+      'app-footer': AppFooter
     },
 
     methods: {

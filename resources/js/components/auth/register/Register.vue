@@ -12,9 +12,11 @@
 </template>
 
 <script>
+  import RegisterForm from './RegisterForm'
+
   export default {
     components: {
-      'register-form': require('./RegisterForm')
+      'register-form': RegisterForm
     },
 
     methods: {

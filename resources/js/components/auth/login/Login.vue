@@ -14,9 +14,11 @@
 </template>
 
 <script>
+  import LoginForm from './LoginForm'
+
   export default {
     components: {
-      'login-form': require('./LoginForm')
+      'login-form': LoginForm
     },
 
     methods: {
