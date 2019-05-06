@@ -23,3 +23,5 @@ mix.webpackConfig({
     }
   }
 })
+
+mix.browserSync(process.env.APP_URL)

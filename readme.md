@@ -22,7 +22,8 @@ Starter SPA built with Laravel 5.8, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios
 * Make sure `storage/framework/cache`, `storage/framework/sessions`, `storage/framework/views` directories exist. Run `mkdir -p storage/framework/{sessions,views,cache}`
 
 ## Usage
-* Run `npm run hot` for live reloading
+* Run `npm run watch` for live reloading using BrowserSync
+* Run `npm run hot` for hot reloading
 * Run `npm run prod` for production buid
 
 ## Bonus

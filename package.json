@@ -14,6 +14,8 @@
     "axios": "^0.18",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "2.0.1",
     "cross-env": "^5.1",
     "laravel-mix": "^4.0.7",
     "stylus": "^0.54.5",
