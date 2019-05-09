@@ -18,7 +18,7 @@
 
   export default {
     components: {
-      'login-form': LoginForm
+      LoginForm
     },
 
     methods: {

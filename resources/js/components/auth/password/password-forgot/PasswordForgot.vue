@@ -18,7 +18,7 @@
 
   export default {
     components: {
-      'password-forgot-form': PasswordForgotForm
+      PasswordForgotForm
     },
 
     methods: {

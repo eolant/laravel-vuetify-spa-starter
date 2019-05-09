@@ -18,7 +18,7 @@
 
 	export default {
 		components: {
-			'password-reset-form': PasswordResetForm
+			PasswordResetForm
 		},
 
 		methods: {

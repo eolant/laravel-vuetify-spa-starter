@@ -16,7 +16,7 @@
 
   export default {
     components: {
-      'register-form': RegisterForm
+      RegisterForm
     },
 
     methods: {

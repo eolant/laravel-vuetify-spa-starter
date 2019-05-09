@@ -10,7 +10,7 @@
 
   export default {
     components: {
-      'profile-edit-form': ProfileEditForm
+      ProfileEditForm
     },
 
     methods: {

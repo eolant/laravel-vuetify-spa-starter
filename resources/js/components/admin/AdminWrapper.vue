@@ -27,9 +27,9 @@
     }),
 
     components: {
-      'app-nav': AppNav,
-      'top-menu': TopMenu,
-      'app-footer': AppFooter
+      AppNav,
+      TopMenu,
+      AppFooter
     },
 
     methods: {
