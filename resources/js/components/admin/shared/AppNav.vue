@@ -98,7 +98,7 @@
 
     methods: {
       navToggle() {
-        this.$emit('navToggle')
+        this.$emit('nav-toggle')
       },
 
       async logout() {
