@@ -17,6 +17,7 @@
           :disabled="loading"
           :to="{ name: 'login', query: {email: form.email} }"
           color="grey darken-2"
+          exact
       >
         Back to login
       </v-btn>

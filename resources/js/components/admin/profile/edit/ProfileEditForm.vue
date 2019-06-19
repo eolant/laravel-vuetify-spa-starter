@@ -56,6 +56,7 @@
           :disabled="loading"
           :to="{ name: 'profile' }"
           color="grey darken-2"
+          exact
       >
         Cancel
       </v-btn>

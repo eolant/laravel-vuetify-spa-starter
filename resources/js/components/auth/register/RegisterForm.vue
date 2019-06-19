@@ -46,6 +46,7 @@
           :disabled="loading"
           :to="{ name: 'login' }"
           color="grey darken-2"
+          exact
       >
         Back to login
       </v-btn>
