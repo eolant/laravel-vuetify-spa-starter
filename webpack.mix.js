@@ -1,4 +1,5 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,7 +13,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .stylus('resources/stylus/app.styl', 'public/css');
+   .sass('resources/styles/app.sass', 'public/css')
 
 mix.webpackConfig({
   resolve: {
@@ -21,7 +22,10 @@ mix.webpackConfig({
       '~': path.join(__dirname, './resources/js'),
       '$comp': path.join(__dirname, './resources/js/components')
     }
-  }
+  },
+  plugins: [
+    new VuetifyLoaderPlugin()
+  ]
 })
 
 mix.browserSync(process.env.APP_URL)

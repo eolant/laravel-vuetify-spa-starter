@@ -6,9 +6,9 @@
     font-weight: 500
 
   .icon
-    color: inherit;
+    color: inherit
 
-  @media $display-breakpoints.xs-only
+  @media #{map-get($display-breakpoints, 'xs-only')}
     position: static !important
-    margin: 0;
-    width: auto;
+    margin: 0
+    width: auto

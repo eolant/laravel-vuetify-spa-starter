@@ -6,7 +6,7 @@
           <router-view></router-view>
         </transition>
       </v-flex>
-      <v-flex lg3 sm4 xs12 mt-5>
+      <v-flex lg3 sm4 xs12 mt-12>
         <sidemenu :threshold="67" :offset="90" :items="items"></sidemenu>
       </v-flex>
     </v-layout>
@@ -14,28 +14,28 @@
 </template>
 
 <script>
-  import Sidemenu from '$comp/ui/Sidemenu'
+import Sidemenu from '$comp/ui/Sidemenu'
 
-  export default {
-    components: {
-      Sidemenu
-    },
+export default {
+  components: {
+    Sidemenu
+  },
 
-    data: () => ({
-      items: []
-    }),
+  data: () => ({
+    items: []
+  }),
 
-    mounted() {
-      this.navigation()
-    },
+  mounted() {
+    this.navigation()
+  },
 
-    methods: {
-      navigation() {
-        this.items = [
-          { title: 'View', icon: 'visibility', to: {name: 'profile'} },
-          { title: 'Edit', icon: 'edit', to: {name: 'profile-edit'} },
-        ]
-      }
+  methods: {
+    navigation() {
+      this.items = [
+        { title: 'View', icon: 'visibility', to: { name: 'profile' } },
+        { title: 'Edit', icon: 'edit', to: { name: 'profile-edit' } },
+      ]
     }
   }
+}
 </script>

@@ -1,25 +1,23 @@
 <template>
-	<v-toolbar dark :clipped-left="$vuetify.breakpoint.mdAndUp" fixed app color="primary">
-    <v-toolbar-side-icon @click.stop="navToggle"></v-toolbar-side-icon>
+	<v-app-bar dark :clipped-left="$vuetify.breakpoint.mdAndUp" fixed app color="primary">
+    <v-app-bar-nav-icon @click.stop="navToggle"></v-app-bar-nav-icon>
 
-    <router-link class="navbar-brand" :to="{ name: 'index' }" v-once>
-    	<v-toolbar-title class="white--text">{{ siteName }}</v-toolbar-title>
-    </router-link>
-  </v-toolbar>
+    <v-toolbar-title class="white--text">{{ siteName }}</v-toolbar-title>
+  </v-app-bar>
 </template>
 
 <script>
-	import { settings } from '~/config'
+import { settings } from '~/config'
 
-	export default {
-		data: () => ({
-			siteName: settings.siteName
-		}),
+export default {
+	data: () => ({
+		siteName: settings.siteName
+	}),
 
-		methods: {
-      navToggle() {
-        this.$emit('nav-toggle')
-      }
-		}
+	methods: {
+    navToggle() {
+      this.$emit('nav-toggle')
+    }
 	}
+}
 </script>

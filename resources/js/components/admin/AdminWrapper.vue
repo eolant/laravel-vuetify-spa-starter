@@ -16,26 +16,25 @@
 </template>
 
 <script>
-  import { settings } from '~/config.js'
-  import AppNav from './shared/AppNav'
-  import TopMenu from './shared/TopMenu'
-  import AppFooter from './shared/AppFooter'
+import AppNav from './shared/AppNav'
+import TopMenu from './shared/TopMenu'
+import AppFooter from './shared/AppFooter'
 
-  export default {
-    data: () => ({
-      mini: false
-    }),
+export default {
+  data: () => ({
+    mini: false
+  }),
 
-    components: {
-      AppNav,
-      TopMenu,
-      AppFooter
-    },
+  components: {
+    AppNav,
+    TopMenu,
+    AppFooter
+  },
 
-    methods: {
-      navToggle() {
-        this.mini = !this.mini
-      }
+  methods: {
+    navToggle() {
+      this.mini = !this.mini
     }
   }
+}
 </script>

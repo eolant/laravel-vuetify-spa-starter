@@ -1,6 +1,6 @@
 <template>
   <v-flex sm8 md6 lg4>
-    <v-card raised>
+    <v-card>
       <v-toolbar dark color="primary" flat>
         <v-toolbar-title>Register</v-toolbar-title>
       </v-toolbar>
@@ -12,19 +12,19 @@
 </template>
 
 <script>
-  import RegisterForm from './RegisterForm'
+import RegisterForm from './RegisterForm'
 
-  export default {
-    components: {
-      RegisterForm
-    },
+export default {
+  components: {
+    RegisterForm
+  },
 
-    methods: {
-      success(data) {
-        this.$store.dispatch('auth/saveToken', data)
-        this.$store.dispatch('auth/setUser', data)
-        this.$router.push({ name: 'index' })
-      }
+  methods: {
+    success(data) {
+      this.$store.dispatch('auth/saveToken', data)
+      this.$store.dispatch('auth/setUser', data)
+      this.$router.push({ name: 'index' })
     }
   }
+}
 </script>
