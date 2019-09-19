@@ -10,6 +10,7 @@
       :disabled="loading"
       :rules="[rules.required('password')]"
       hint="At least 6 characters"
+      @input="clearErrors('password')"
     ></v-text-field>
 
     <v-text-field
@@ -19,6 +20,7 @@
       :error-messages="errors.password_confirmation"
       :disabled="loading"
       :rules="[rules.required('password_confirmation')]"
+      @input="clearErrors('password')"
     ></v-text-field>
 
     <v-layout class="mt-4 mx-0">

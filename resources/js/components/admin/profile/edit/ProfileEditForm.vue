@@ -8,6 +8,7 @@
           :error-messages="errors.name"
           :rules="[rules.required('name')]"
           :disabled="loading"
+          @input="clearErrors('name')"
         ></v-text-field>
 
         <v-text-field
@@ -17,6 +18,7 @@
           :error-messages="errors.email"
           :rules="[rules.required('email')]"
           :disabled="loading"
+          @input="clearErrors('email')"
         ></v-text-field>
       </v-card-text>
     </v-card>
@@ -35,6 +37,7 @@
           :disabled="loading"
           hint="At least 6 characters"
           autocomplete="new-password"
+          @input="clearErrors('password')"
         ></v-text-field>
 
         <v-text-field
@@ -44,6 +47,7 @@
           :error-messages="errors.password_confirmation"
           :disabled="loading"
           autocomplete="new-password"
+          @input="clearErrors('password')"
         ></v-text-field>
       </v-card-text>
     </v-card>

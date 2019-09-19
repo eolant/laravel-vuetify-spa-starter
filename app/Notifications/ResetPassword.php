@@ -17,9 +17,9 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject(Lang::getFromJson('Reset Password Notification'))
-            ->line(Lang::getFromJson('You are receiving this email because we received a password reset request for your account.'))
-            ->action(Lang::getFromJson('Reset Password'), url(config('app.url') . '/password/reset/' . $this->token) . '?email='.urlencode($notifiable->email))
-            ->line(Lang::getFromJson('If you did not request a password reset, no further action is required.'));
+            ->subject(Lang::get('Reset Password Notification'))
+            ->line(Lang::get('You are receiving this email because we received a password reset request for your account.'))
+            ->action(Lang::get('Reset Password'), url(config('app.url') . '/password/reset/' . $this->token) . '?email='.urlencode($notifiable->email))
+            ->line(Lang::get('If you did not request a password reset, no further action is required.'));
     }
 }

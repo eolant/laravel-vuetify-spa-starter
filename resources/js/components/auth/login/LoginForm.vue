@@ -8,6 +8,7 @@
       :rules="[rules.required('email')]"
       :disabled="loading"
       prepend-icon="person"
+      @input="clearErrors('email')"
     ></v-text-field>
 
     <v-text-field
@@ -20,6 +21,7 @@
       :disabled="loading"
       :rules="[rules.required('password')]"
       prepend-icon="lock"
+      @input="clearErrors('password')"
     ></v-text-field>
 
     <v-layout class="mt-4 mx-0">

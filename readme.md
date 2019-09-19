@@ -1,8 +1,8 @@
 # Laravel Vuetify SPA Starter
-Starter SPA built with Laravel 5.8, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios, Vuetify 2
+Starter SPA built with Laravel 6.0, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios, Vuetify 2
 
 ## Included
-* [Laravel 5.8](https://laravel.com/docs/5.8)
+* [Laravel 6.0](https://laravel.com/docs/6.0)
 * [Vue 2](https://vuejs.org)
 * [Vue Router 3](http://router.vuejs.org)
 * [Vuex 3](http://vuex.vuejs.org)

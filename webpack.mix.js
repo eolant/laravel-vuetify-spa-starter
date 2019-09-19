@@ -25,7 +25,17 @@ mix.webpackConfig({
   },
   plugins: [
     new VuetifyLoaderPlugin()
-  ]
+  ],
+  module: {
+    rules: [{
+      test: /\.js?$/,
+      exclude: /(bower_components)/,
+      use: [{
+        loader: 'babel-loader',
+        options: mix.config.babel()
+      }]
+    }]
+  }
 })
 
 mix.browserSync(process.env.APP_URL)

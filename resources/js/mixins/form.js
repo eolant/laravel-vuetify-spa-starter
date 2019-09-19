@@ -48,9 +48,16 @@ export default {
       }
     },
 
-    clearErrors() {
-      for (let key in this.errors) {
-        this.errors[key] = []
+    clearErrors(key = false) {
+      if (key) {
+        if (this.errors[key].length) {
+          this.errors[key] = []
+        }
+      }
+      else {
+        for (let key in this.errors) {
+          this.errors[key] = []
+        }
       }
     }
   }
