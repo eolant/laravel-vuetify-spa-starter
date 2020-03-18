@@ -24,7 +24,7 @@ Starter SPA built with Laravel 6.0, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios
 ## Usage
 * Run `npm run watch` for live reloading using BrowserSync
 * Run `npm run hot` for hot reloading
-* Run `npm run prod` for production buid
+* Run `npm run prod` for production build
 
 ## Bonus
 * Lightweight [Vuetify Toast Snackbar](https://github.com/eolant/vuetify-toast-snackbar)
