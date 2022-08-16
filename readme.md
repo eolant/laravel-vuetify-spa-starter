@@ -1,8 +1,8 @@
 # Laravel Vuetify SPA Starter
-Starter SPA built with Laravel 6.0, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios, Vuetify 2
+Starter SPA built with Laravel 9.0, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios, Vuetify 2
 
 ## Included
-* [Laravel 6.0](https://laravel.com/docs/6.0)
+* [Laravel 9.0](https://laravel.com/docs/9.x)
 * [Vue 2](https://vuejs.org)
 * [Vue Router 3](http://router.vuejs.org)
 * [Vuex 3](http://vuex.vuejs.org)
@@ -22,9 +22,8 @@ Starter SPA built with Laravel 6.0, JWT Auth, Vue 2, Vue Router 3, Vuex 3, Axios
 * Make sure `storage/framework/cache`, `storage/framework/sessions`, `storage/framework/views` directories exist. Run `mkdir -p storage/framework/{sessions,views,cache}`
 
 ## Usage
-* Run `npm run watch` for live reloading using BrowserSync
-* Run `npm run hot` for hot reloading
-* Run `npm run prod` for production buid
+* Run `mix watch` for live reloading using BrowserSync
+* Run `mix --production` for production build
 
 ## Bonus
 * Lightweight [Vuetify Toast Snackbar](https://github.com/eolant/vuetify-toast-snackbar)

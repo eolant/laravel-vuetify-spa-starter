@@ -1,4 +1,8 @@
 const mix = require('laravel-mix')
+require("vuetifyjs-mix-extension");
+require("laravel-mix-clean");
+let path = require('path');
+
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 /*
@@ -12,8 +16,24 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/styles/app.sass', 'public/css')
+mix.js("resources/js/app.js", "public/js").vue();
+mix.sass("resources/styles/app.scss", "public/css")
+
+if (mix.inProduction()) {
+  mix.version();
+
+  mix.webpackConfig({
+    output: {
+      chunkFilename: "js/chunks/[name].[contenthash].js", // replace with your path
+    },
+  });
+} else {
+  mix.webpackConfig({
+    output: {
+      chunkFilename: "js/chunks/[name].js", // replace with your path
+    },
+  });
+}
 
 mix.webpackConfig({
   resolve: {
@@ -32,7 +52,7 @@ mix.webpackConfig({
       exclude: /(bower_components)/,
       use: [{
         loader: 'babel-loader',
-        options: mix.config.babel()
+        //options: mix.config.babel()
       }]
     }]
   }

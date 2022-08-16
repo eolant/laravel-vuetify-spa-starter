@@ -11,6 +11,6 @@
 |
 */
 
-Route::any('{all}', function () {
-    return view('app');
-})->where(['all' => '.*']);
+use Illuminate\Support\Facades\Route;
+
+Route::view('/{vue_route?}', 'app')->where('vue_route', '[\/\w\.-]*')->name('app.index');

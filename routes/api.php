@@ -11,20 +11,27 @@
 |
 */
 
-Route::group(['middleware' => ['guest:api']], function() {
-    Route::post('login', 'Auth\LoginController@login');
-    Route::post('login/refresh', 'Auth\LoginController@refresh');
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 
-    Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-    Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+Route::group(['middleware' => ['guest:api']], function () {
+    Route::post('login', [LoginController::class, 'login']);
+    Route::post('login/refresh', [LoginController::class, 'refresh']);
 
-    Route::post('register', 'Auth\RegisterController@register');
+    Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail']);
+    Route::post('password/reset', [ResetPasswordController::class, 'reset']);
+
+    Route::post('register', [RegisterController::class, 'register']);
 });
 
-Route::group(['middleware' => ['jwt']], function() {
-    Route::post('logout', 'Auth\LoginController@logout');
+Route::group(['middleware' => ['jwt']], function () {
+    Route::post('logout', [LoginController::class, 'logout']);
 
-    Route::get('me', 'Auth\LoginController@me');
-    Route::put('profile', 'ProfileController@update');
+    Route::get('me', [LoginController::class, 'me']);
+    Route::put('profile', [ProfileController::class, 'update']);
 });
 
