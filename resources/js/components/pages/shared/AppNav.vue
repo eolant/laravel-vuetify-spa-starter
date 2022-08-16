@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer fixed app :permanent="$vuetify.breakpoint.mdAndUp" light :mini-variant.sync="$vuetify.breakpoint.mdAndUp && mini" :clipped="$vuetify.breakpoint.mdAndUp" :value="mini" :width="300">
+  <v-navigation-drawer v-if="items.length" app fixed :permanent="$vuetify.breakpoint.mdAndUp" light :mini-variant.sync="$vuetify.breakpoint.mdAndUp && mini" :clipped="$vuetify.breakpoint.mdAndUp" :value="mini" :width="300">
     <v-list class="py-0">
       <v-list-item>
         <v-list-item-icon v-show="$vuetify.breakpoint.mdAndUp && mini">
@@ -100,7 +100,7 @@ export default {
   },
 
   mounted() {
-    this.name = this.auth.name
+    this.name = this.auth?.name || 'Username'
     this.navigation()
   },
 
@@ -113,7 +113,7 @@ export default {
       await this.$store.dispatch('auth/logout')
 
       this.$toast.info('You are logged out.')
-      this.$router.push({ name: 'login' })
+      await this.$router.push({name: 'login'})
     },
 
     navigation() {

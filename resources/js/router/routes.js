@@ -14,13 +14,13 @@ export default [
     },
   ]),
   ...applyRules(['auth'], [
-    { path: '', component: require('$comp/admin/AdminWrapper').default, children:
+    { path: '', component: require('$comp/pages/PagesWrapper').default, children:
       [
         { path: '', name: 'index', redirect: { name: 'profile' } },
-        { path: 'profile', component: require('$comp/admin/profile/ProfileWrapper').default, children:
+        { path: 'profile', component: require('$comp/pages/profile/ProfileWrapper').default, children:
           [
-            { path: '', name: 'profile', component: require('$comp/admin/profile/Profile').default },
-            { path: 'edit', name: 'profile-edit', component: require('$comp/admin/profile/edit/ProfileEdit').default }
+            { path: '', name: 'profile', component: require('$comp/pages/profile/Profile').default },
+            { path: 'edit', name: 'profile-edit', component: require('$comp/pages/profile/edit/ProfileEdit').default }
           ]
         }
       ]

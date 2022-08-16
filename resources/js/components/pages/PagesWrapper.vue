@@ -3,15 +3,15 @@
     <app-nav :mini="mini" @nav-toggle="navToggle"></app-nav>
     <top-menu @nav-toggle="navToggle"></top-menu>
 
-    <v-content>
+    <v-main>
       <v-container fluid>
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
       </v-container>
-    </v-content>
+      <app-footer></app-footer>
+    </v-main>
 
-    <app-footer></app-footer>
   </div>
 </template>
 
